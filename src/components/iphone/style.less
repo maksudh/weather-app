@@ -1,0 +1,50 @@
+@import '~style/helpers';
+
+.container { 
+	display: flex;
+	flex-direction: column;
+	// background-image: url('https://images.unsplash.com/photo-1533036176814-15768dd821d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=770&q=80');
+	color: #fff;
+	width: 414px;
+	height: 736px;
+	text-align: left;
+	padding-top: 80px;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin: 0 auto;
+	text-shadow: 2px 2px 4px #808080;
+}
+.header {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.details {
+	flex: 4;
+}
+.city {
+	flex: 1;
+	font-size: 1.7em;
+	font-weight: 400;	
+}
+.conditions {
+	flex: 1;
+	font-size: 1em;
+}
+.temperature {
+	flex: 2;
+	margin-top: 0;
+	font-size: 4.8em;
+	font-weight: 300;
+	letter-spacing: -5px;
+}
+.filled:after {
+	content: "°";
+	margin: 0 0 0 1rem;
+	font-size: 0.5em;
+	font-weight: 100;
+	display: inline-block;
+	padding-top: 10px;
+	vertical-align: top;
+}
