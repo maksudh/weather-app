@@ -1,0 +1,263 @@
+@import '~style/helpers';
+// style for container 
+.container {
+	display: flex;
+	flex-direction: column;
+	background-image: url('https://images.unsplash.com/photo-1533036176814-15768dd821d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=770&q=80');
+	color: #fff;
+	width: 414px;
+	height: 1226px;
+	text-align: left;
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+	margin: 0 auto;
+	text-shadow: 3px 3px 9px #222;
+	font-family: Arial, Helvetica, sans-serif;
+}
+// style for header
+.header {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+// style for details 
+.details {
+	flex: 4;
+}
+// style for city details 
+.city {
+	flex: 1;
+	font-size: 1.7em;
+	font-weight: 400;
+}
+// style for conidions 
+.conditions {
+	flex: 1;
+	font-size: 1em;
+}
+// style for temperate 
+.temperature {
+	flex: 2;
+	margin-top: 0;
+	font-size: 4.8em;
+	font-weight: 300;
+	letter-spacing: -5px;
+}
+// style for when temps are fetched 
+.filled:after {
+	content: "°";
+	margin: 0 0 0 1rem;
+	font-size: 0.5em;
+	font-weight: 100;
+	display: inline-block;
+	padding-top: 10px;
+	vertical-align: top;
+}
+// style for scrolling hourly temp data 
+.timeContainer {
+	margin-top: 30px;
+	border-top-style: solid;
+	overflow-x: auto;
+  white-space: nowrap;
+}
+// stlye for time 
+.time {
+	display: inline-block;
+	text-align: center;
+	font-weight: bold;
+}
+// style for dropshadow 
+img{
+	-webkit-filter: drop-shadow(5px 5px 5px #222);
+	filter: drop-shadow(5px 5px 5px #222);
+}
+// styles for specific images to clean up the look 
+img[id^='hour']{
+	width: 40%;
+}
+
+img[id^='day']{
+	width: 71%;
+}
+
+img[id='umain'], img[id ='dmain']{
+	width: 5%;
+}
+
+img[id^='down'], img[id^='up']{
+	width: 12%;
+}
+// style for the scrolling extra weather info 
+.info{
+	display: inline-block;
+	text-align: left;
+	padding-right: 200px;
+}
+// style for the scrolling extra weather info 
+.infoContainer {
+	border-top-style: solid;
+}
+// style for second block of weather details in scrolling container 
+.infoInner{
+	display: inline-block;
+	text-align: left;
+	padding-right: 140px;
+}
+// Track
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+    border-radius: 8px;
+}
+
+// Handle
+::-webkit-scrollbar-thumb {
+  background: #888;
+    border-radius: 8px;
+}
+
+// Handle on hover
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+// scrollbar height 
+::-webkit-scrollbar {
+    height: 9px;
+}
+// global styles for notifications 
+:global(.status-alert) {
+	max-width: 414px !important;
+}
+
+:global(.status-alert__box.is-orange-warning) {
+	background-color: #861000 !important;
+  }
+
+:global(.status-alert__box){
+	padding: 0px 0px 0px 0px !important;
+	background-color: #797e88 !important;
+}
+// style for notification content 
+.notifContent{
+	height: 60px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	padding: 5px;
+	text-shadow: none;
+	-webkit-filter: none;
+	filter: none;
+
+}
+// style for simple notifications 
+.notifContentSimple{
+  height: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	color: white;
+	padding: 5px;
+	padding: 5px;
+	text-shadow: none;
+	-webkit-filter: none;
+	filter: none;
+}
+// stlye for weather icons 
+.weatherIcon{
+	flex-shrink: 0;
+	flex-grow: 0;
+	width: 55px;
+	height: 55px;
+	overflow: hidden;
+}
+// style for weather icon images 
+.weatherIconImg{
+	height: 65px;
+	width: 65px;
+	margin: -5px 0 0 -5px;
+	padding: 5px;
+	text-shadow: none;
+	-webkit-filter: none;
+	filter: none;
+}
+// style for average temps 
+.avgTemp{
+	font-size: 40px;
+}
+// simple average temp styles 
+.avgTempSimple{
+  font-size: 40px;
+	flex-grow: 0;
+	margin-right: 20px
+}
+// style for temperature range
+.tempRange{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+// style for temperatues 
+.temps{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+// style for text along with temp
+.tempsText{
+	font-size: 17px;
+	margin: 0px;
+	margin-right: 1px;
+}
+// style for temp pics
+.tempsPics{
+	margin-right: 5px;
+	height: 8px;
+}
+// style for percipitation 
+.precipitation{
+	font-size: 25px;
+}
+// stlye for weather conditions 
+.conditions{
+	width: 160px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	font-size: 25px
+}
+// simple stlye for weather 
+.conditionsSimple{
+	flex-grow: 1;
+	font-size: 30px;
+}
+// style for warning notif content 
+.warningContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    padding: 25px;
+}
+// stlye for warning icons
+.warningIcon{
+    width: 80px;
+    margin: 0 0 25px 0;
+}
+// stlye for warning header 
+.warningHeader{
+    font-size: 30px;
+    font-weight: bold;
+}
+// stlye for warning message 
+.warningMessage{
+    margin: 25px 0px 0px 0px;
+    border-radius: 5px;
+    background-color: #a70000;
+    padding: 25px;
+}
